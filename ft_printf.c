@@ -6,7 +6,7 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 11:36:51 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/20 16:51:14 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/22 15:50:27 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,15 @@ int ft_printf(const char	*str, ...)
 		if(str[i] == '%')
 		{
 			i++;
-			if (str[i] == 'd')
-			{
+			if (str[i] == 'd' || str[i] == 'i')
 				count += ft_putnbr_mod(va_arg(ap, int));
-			}
 			if (str[i] == 'c')
-			{
 				count += ft_putchar_mod(va_arg(ap, int));
-			}
 			if (str[i] == 's')
-			{
 				count += ft_putstr_mod(va_arg(ap, char	*));
-			}
+			if (str[i] == 'x')
+				count += ft_hexa(va_arg(ap, uint64_t));
+			
 			//printf("valeur de i %zu" , i);
 		}
 		else
@@ -55,6 +52,6 @@ va_end(ap);
 }
 /*int main(void)
 {
-	ft_printf(" %d ", -100);
+	ft_printf(" %p ", 105);
 	return 0;
 }*/
