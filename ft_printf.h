@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rgeral <rgeral@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:01:30 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/22 16:27:49 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/23 12:06:24 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_putstr_mod(char	*str);
 int	ft_strlen_mod(char	*str);
 int	ft_putnbr_mod(int n);
 int ft_printf(const char	*str, ...);
-int	ft_hexa(uint64_t	str);
+int	ft_hexa(uint64_t	str, char	c);
 
 #endif
