@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_mod.c                                    :+:      :+:    :+:   */
+/*   ft_printp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 13:51:01 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/23 16:54:12 by rgeral           ###   ########.fr       */
+/*   Created: 2021/11/23 17:54:36 by rgeral            #+#    #+#             */
+/*   Updated: 2021/11/23 18:56:06 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr_mod(char	*str)
+int	ft_printp(unsigned long long nb)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (!str)
-	{
-		write(1, "(null)" , 6);
-		return (6);
-	}
-	while (str[i])
-	{
-		write(1, &str[i] , 1);
-		i++;
-	}
-	return(ft_strlen_mod(str));
+	count = 0;
+	count = ft_putstr_mod("0x");
+	count += ft_hexa(nb, 'x');
+	return(count );
+	
 }

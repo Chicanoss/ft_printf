@@ -6,7 +6,7 @@
 #    By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:24:03 by rgeral            #+#    #+#              #
-#    Updated: 2021/11/22 15:49:59 by rgeral           ###   ########.fr        #
+#    Updated: 2021/11/23 18:07:03 by rgeral           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ ft_putnbr_mod.c\
 ft_putstr_mod.c\
 ft_strlen_mod.c\
 ft_hexa.c\
+ft_printu.c\
+ft_printp.c\
 
 OBJ = $(SRC:.c=.o)
 HEADER_FILE = ft_printf.h

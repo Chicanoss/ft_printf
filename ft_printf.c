@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgeral <rgeral@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 11:36:51 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/23 12:06:03 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/23 18:51:34 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
-
+#include <limits.h>
 int ft_printf(const char	*str, ...)
 {
     va_list ap;
@@ -35,8 +35,11 @@ int ft_printf(const char	*str, ...)
 			if (str[i] == 's')
 				count += ft_putstr_mod(va_arg(ap, char	*));
 			if (str[i] == 'x' || str[i] == 'X')
-				count += ft_hexa(va_arg(ap, uint64_t), str[i]);
-			
+				count += ft_hexa(va_arg(ap, int), str[i]);
+			if (str[i] == 'u')
+				count += ft_printu(va_arg(ap,unsigned int));
+			if (str[i] == 'p')
+				count += ft_printp(va_arg(ap, unsigned long long));
 			//printf("valeur de i %zu" , i);
 		}
 		else
@@ -50,9 +53,9 @@ int ft_printf(const char	*str, ...)
 	return(count);
 va_end(ap);
 }
-int main(void)
+/*int main(void)
 {
-	ft_printf("%u", -1);
-	printf("\n%u" , -1);
+	ft_printf(" %p ", -1);
+	printf(" %p ", -1);
 	return 0;
-}
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgeral <rgeral@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:51:02 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/23 11:53:48 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/23 16:36:58 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 int	len(uint64_t	str)
 {
 	int i;
+	int n;
 
+	n = str;
 	i = 0;
 	if (str == 0)
 		return(1);	
@@ -28,7 +30,9 @@ int	len(uint64_t	str)
 		i++;
 	}
 	if (i > 8)
+	{	
 		return (8);
+	}
 	return (i);
 }
 
@@ -58,7 +62,7 @@ int	ft_hexa(uint64_t	str, char	c)
 		str = str / 16;
 	}
 	//printf("Valeur de new_str : %s\n" , new_str);
-	i = 0;
+	// i = 0;
 	while (new_str[i] != '\0')
 	{
 		write(1, &new_str[i], 1);
