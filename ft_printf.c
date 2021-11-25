@@ -6,7 +6,7 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 11:36:51 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/25 15:57:38 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/25 19:08:51 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_condition(va_list ap, const char *str, int i)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (str[i] == 'd' || str[i] == 'i')
 		count += ft_putnbr_mod(va_arg(ap, int));
-	else if(str[i] == 'c')
+	else if (str[i] == 'c')
 		count += ft_putchar_mod(va_arg(ap, int));
 	else if (str[i] == 's')
 		count += ft_putstr_mod(va_arg(ap, char *));
@@ -31,8 +31,9 @@ int	ft_condition(va_list ap, const char *str, int i)
 		count += ft_printp(va_arg(ap, unsigned long long));
 	else if (str[i] == '%')
 		count += ft_putchar_mod(str[i]);
-	return(count);
+	return (count);
 }
+
 int	ft_printf(const char	*str, ...)
 {
 	va_list	ap;
@@ -56,6 +57,7 @@ int	ft_printf(const char	*str, ...)
 	va_end (ap);
 	return (count);
 }
+
 /*int main(void)
 {
 	ft_printf(" %% ");
