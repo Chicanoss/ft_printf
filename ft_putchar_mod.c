@@ -6,14 +6,14 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:00:39 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/20 16:08:28 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/25 11:50:02 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_mod(char	c)
+int	ft_putchar_mod(char c)
 {
 	write(1, &c, 1);
-	return(1);
+	return (1);
 }
