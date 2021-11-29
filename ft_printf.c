@@ -6,7 +6,7 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 11:36:51 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/29 11:01:17 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/29 11:30:36 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,3 @@ int	ft_printf(const char	*str, ...)
 	va_end (ap);
 	return (count);
 }
-
-/*int main(void)
-{
-	ft_printf(" %");
-	printf("\n");
-	printf(" %");
-	return 0;
-}*/
