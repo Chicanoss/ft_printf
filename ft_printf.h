@@ -6,7 +6,7 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:01:30 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/25 14:21:33 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/29 11:02:16 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-
-int	ft_putchar_mod(char	c);
-int	ft_putstr_mod(char	*str);
-int	ft_strlen_mod(char	*str);
+int	ft_putchar_mod(char c);
+int	ft_putstr_mod(char *str);
+int	ft_strlen_mod(char *str);
 int	ft_putnbr_mod(int n);
-int ft_printf(const char	*str, ...);
-int	ft_hexa(uint64_t	str, char	c);
+int	ft_printf(const char	*str, ...);
+int	ft_hexa(uint64_t str, char c);
 int	ft_printu(unsigned int n);
 int	ft_printp(unsigned long long nb);
 

@@ -6,7 +6,7 @@
 /*   By: rgeral <rgeral@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 11:36:51 by rgeral            #+#    #+#             */
-/*   Updated: 2021/11/25 19:08:51 by rgeral           ###   ########.fr       */
+/*   Updated: 2021/11/29 11:01:17 by rgeral           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	ft_condition(va_list ap, const char *str, int i)
 		count += ft_printp(va_arg(ap, unsigned long long));
 	else if (str[i] == '%')
 		count += ft_putchar_mod(str[i]);
+	else
+		count += ft_putchar_mod(str[i]);
 	return (count);
 }
 
@@ -45,7 +47,7 @@ int	ft_printf(const char	*str, ...)
 	count = 0;
 	while (str[i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i + 1])
 		{
 			i++;
 			count += ft_condition(ap, str, i);
@@ -60,8 +62,8 @@ int	ft_printf(const char	*str, ...)
 
 /*int main(void)
 {
-	ft_printf(" %% ");
+	ft_printf(" %");
 	printf("\n");
-	printf(" %% ");
+	printf(" %");
 	return 0;
 }*/
